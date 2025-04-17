@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Camera, Heart, Award } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [ref, inView] = useInView({
@@ -76,7 +77,7 @@ const Home = () => {
               className="overflow-hidden"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Let's tell your story through the lens
+                Freeze Time. Frame Emotions. Feel Forever.
               </h1>
             </motion.div>
             <motion.div
@@ -87,7 +88,8 @@ const Home = () => {
               className="overflow-hidden"
             >
               <p className="text-xl mb-8">
-                Capturing life's precious moments with artistry and emotion
+                Capturing authentic moments through the lens — from timeless
+                portraits to candid stories.
               </p>
             </motion.div>
             <motion.div
@@ -95,15 +97,32 @@ const Home = () => {
               animate="visible"
               variants={textVariants}
               custom={2}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="space-x-4"
             >
-              <a
-                href="/contact"
-                className="inline-block bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block"
               >
-                Book a Session
-              </a>
+                <Link
+                  to="/contact"
+                  className="inline-block bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Book a Session
+                </Link>
+              </motion.span>
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block"
+              >
+                <Link
+                  to="/portfolio"
+                  className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white/10 transition-colors"
+                >
+                  View Portfolio
+                </Link>
+              </motion.span>
             </motion.div>
           </div>
         </div>
@@ -120,12 +139,15 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Crafting Visual Stories Since way back
+              Our Story Through the Lens
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              With over a decade of experience, we specialize in creating
-              timeless photographs that capture the essence of your special
-              moments.
+            <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              With over a decade behind the lens, we turn fleeting moments into
+              visual stories that last a lifetime. Whether it's a glowing sunset
+              engagement shoot or the quiet joy in a newborn's yawn, each frame
+              is a tribute to real, human connection. Rooted in creativity and
+              refined by experience, our work is defined by natural light,
+              emotional depth, and genuine storytelling.
             </p>
           </motion.div>
 
@@ -133,21 +155,21 @@ const Home = () => {
             {[
               {
                 icon: <Camera className="h-10 w-10" />,
-                title: "Professional Equipment",
+                title: "Natural Light",
                 description:
-                  "Using top-of-the-line gear to ensure the highest quality results",
+                  "Specializing in capturing the perfect moment with beautiful, natural lighting",
               },
               {
                 icon: <Heart className="h-10 w-10" />,
-                title: "Passionate Approach",
+                title: "Emotional Depth",
                 description:
-                  "Every shoot is handled with creativity, care, and attention to detail",
+                  "Creating images that tell stories and evoke genuine emotions",
               },
               {
                 icon: <Award className="h-10 w-10" />,
-                title: "Award Winning",
+                title: "Authentic Stories",
                 description:
-                  "Recognized internationally for exceptional photography",
+                  "Documenting real moments with creativity and authenticity",
               },
             ].map((item, index) => (
               <motion.div
