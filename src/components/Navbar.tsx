@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Menu, X, Camera } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { Menu, X, Camera } from "lucide-react";
+import { motion } from "framer-motion";
+import logo from "../assets/img/PAPI logo-03.svg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/portfolio', label: 'Portfolio' },
-    { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' },
+    { path: "/", label: "Home" },
+    { path: "/portfolio", label: "Portfolio" },
+    { path: "/about", label: "About" },
+    { path: "/contact", label: "Contact" },
   ];
 
   return (
@@ -19,8 +20,12 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <NavLink to="/" className="flex items-center space-x-2">
-              <Camera className="h-8 w-8" />
-              <span className="font-semibold text-xl">Papicreated</span>
+              <img
+                src={logo}
+                alt="Papi Created Logo"
+                className="w-[80px] h-auto"
+              />
+              {/* <span className="font-semibold text-xl">Papicreated</span> */}
             </NavLink>
           </div>
 
@@ -32,7 +37,7 @@ const Navbar = () => {
                 to={item.path}
                 className={({ isActive }) =>
                   `text-gray-700 hover:text-black transition-colors ${
-                    isActive ? 'border-b-2 border-black' : ''
+                    isActive ? "border-b-2 border-black" : ""
                   }`
                 }
               >
@@ -47,7 +52,11 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-black"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -70,8 +79,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `block px-3 py-2 rounded-md text-base font-medium ${
                     isActive
-                      ? 'text-black bg-gray-100'
-                      : 'text-gray-700 hover:text-black hover:bg-gray-50'
+                      ? "text-black bg-gray-100"
+                      : "text-gray-700 hover:text-black hover:bg-gray-50"
                   }`
                 }
               >

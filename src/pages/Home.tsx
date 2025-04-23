@@ -76,7 +76,7 @@ const Home = () => {
               custom={0}
               className="overflow-hidden"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="font-korinna text-4xl md:text-6xl font-bold mb-6">
                 Freeze Time. Frame Emotions. Feel Forever.
               </h1>
             </motion.div>

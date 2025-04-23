@@ -1,3 +1,73 @@
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_Normal.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_LT_Regular.otf") format("opentype");
+  font-weight: 450;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_LT_Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_Std_Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_Std_Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/ITC_Korinna_Std_Kursiv.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Korinna";
+  src: url("../src/assets/font/Korinna_Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

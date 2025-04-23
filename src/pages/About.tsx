@@ -73,7 +73,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&q=80"
+                src="#"
                 alt="Photographer at work"
                 className="rounded-lg shadow-xl"
               />
