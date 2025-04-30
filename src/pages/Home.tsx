@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Camera, Heart, Award } from "lucide-react";
 import { Link } from "react-router-dom";
-import bgImage from "../assets/img/"
+import bgImage from "../assets/img/IMG_8112.jpg";
 
 const Home = () => {
   const [ref, inView] = useInView({
@@ -61,7 +61,7 @@ const Home = () => {
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 transition-transform duration-1000 hover:scale-100"
             style={{
-              backgroundImage: "url(&{bgImage})",
+              backgroundImage: `url(${bgImage})`,
             }}
           >
             <div className="absolute inset-0 bg-black/50" />
