@@ -1,22 +1,24 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Camera, Clock } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Phone, Mail, MapPin, Camera, Clock } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -32,7 +34,7 @@ const Contact = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              'url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80)',
+              "url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80)",
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
@@ -44,7 +46,9 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Get in Touch</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Get in Touch
+            </h1>
             <p className="text-xl">Let's create something beautiful together</p>
           </motion.div>
         </div>
@@ -73,19 +77,19 @@ const Contact = () => {
                   <Mail className="h-6 w-6 mr-4 text-gray-600" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-600">contact@papicreated.com</p>
+                    <p className="text-gray-600">papicreated@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <MapPin className="h-6 w-6 mr-4 text-gray-600" />
                   <div>
-                    <h3 className="font-semibold">Studio Location</h3>
-                    <p className="text-gray-600">123 Creative Ave, New York, NY 10001</p>
+                    <h3 className="font-semibold">Location</h3>
+                    <p className="text-gray-600">California, United States</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12">
+              {/*<div className="mt-12">
                 <h2 className="text-3xl font-bold mb-8">Studio Hours</h2>
                 <div className="space-y-4">
                   <div className="flex items-center">
@@ -110,7 +114,7 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div>*/}
             </motion.div>
 
             {/* Contact Form */}
@@ -123,7 +127,10 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-8">Send a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Name
                   </label>
                   <input
@@ -137,7 +144,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email
                   </label>
                   <input
@@ -151,7 +161,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Subject
                   </label>
                   <input
@@ -165,7 +178,10 @@ const Contact = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message
                   </label>
                   <textarea
