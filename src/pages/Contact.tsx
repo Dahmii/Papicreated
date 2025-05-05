@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Camera, Clock } from "lucide-react";
+import bgImage from "../assets/img/IMG_8112.jpg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -29,12 +30,11 @@ const Contact = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[40vh]">
+      <section className="relative h-[60vh]">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80)",
+            backgroundImage: `url(${bgImage})`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
@@ -70,7 +70,7 @@ const Contact = () => {
                   <Phone className="h-6 w-6 mr-4 text-gray-600" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+1 (661) 609-8731</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -131,7 +131,7 @@ const Contact = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Name
+                    First & Last Name
                   </label>
                   <input
                     type="text"
@@ -143,6 +143,7 @@ const Contact = () => {
                     required
                   />
                 </div>
+
                 <div>
                   <label
                     htmlFor="email"
@@ -160,6 +161,85 @@ const Contact = () => {
                     required
                   />
                 </div>
+
+                <div>
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="inquiryType"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Type of Inquiry
+                  </label>
+                  <select
+                    id="inquiryType"
+                    name="inquiryType"
+                    value={formData.inquiryType}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                    required
+                  >
+                    <option value="">Select an option</option>
+                    <option>Wedding</option>
+                    <option>Engagement shoot</option>
+                    <option>Elopement</option>
+                    <option>Vow Renewal</option>
+                    <option>Maternity Session</option>
+                    <option>Studio Portrait Session</option>
+                    <option>Corporate Event</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="eventDate"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Event Date
+                  </label>
+                  <input
+                    type="date"
+                    id="eventDate"
+                    name="eventDate"
+                    value={formData.eventDate}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="location"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    City or State
+                  </label>
+                  <input
+                    type="text"
+                    id="location"
+                    name="location"
+                    value={formData.location}
+                    onChange={handleChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                  />
+                </div>
+
                 <div>
                   <label
                     htmlFor="subject"
@@ -177,6 +257,7 @@ const Contact = () => {
                     required
                   />
                 </div>
+
                 <div>
                   <label
                     htmlFor="message"
@@ -194,6 +275,7 @@ const Contact = () => {
                     required
                   />
                 </div>
+
                 <button
                   type="submit"
                   className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800 transition-colors"
