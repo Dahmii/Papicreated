@@ -151,45 +151,40 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Portfolio Gallery Collage */}
+          <div className="mt-12 columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
             {[
-              {
-                icon: <Camera className="h-10 w-10" />,
-                title: "Natural Light",
-                description:
-                  "Specializing in capturing the perfect moment with beautiful, natural lighting",
-              },
-              {
-                icon: <Heart className="h-10 w-10" />,
-                title: "Emotional Depth",
-                description:
-                  "Creating images that tell stories and evoke genuine emotions",
-              },
-              {
-                icon: <Award className="h-10 w-10" />,
-                title: "Authentic Stories",
-                description:
-                  "Documenting real moments with creativity and authenticity",
-              },
-            ].map((item, index) => (
+              "/images/collage1.jpeg",
+              "/images/collage2.JPG",
+              "/images/collage3.JPG",
+              "/images/collage4.jpeg",
+              "/images/collage5.JPG",
+              "/images/collage6.JPG",
+              "/images/collage7.JPG",
+              "/images/collage8.JPG",
+              "/images/collage9.jpeg",
+              "/images/collage10.jpeg",
+              "/images/collage11.JPG",
+              "/images/collage12.JPG",
+              "/images/collage13.JPG",
+              "/images/collage14.JPG",
+              "/images/collage15.jpeg",
+              "/images/collage16.JPG",
+              "/images/collage8.JPG",
+            ].map((src, index) => (
               <motion.div
                 key={index}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                variants={fadeInUp}
-                custom={index + 1}
-                whileHover={{ y: -10 }}
-                className="text-center p-6 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="overflow-hidden rounded-lg break-inside-avoid"
               >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="inline-block p-4 bg-white rounded-full mb-4 shadow-md"
-                >
-                  {item.icon}
-                </motion.div>
-                <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
+                <img
+                  src={src}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out hover:scale-105 rounded-lg"
+                />
               </motion.div>
             ))}
           </div>
