@@ -99,7 +99,7 @@ const About = () => {
                 clients, understanding their vision, and translating it into
                 timeless photographs.
               </p>
-              <div className="grid grid-cols-3 gap-4 text-center">
+              {/* <div className="grid grid-cols-3 gap-4 text-center">
                 <div className="p-4 bg-gray-50 rounded-lg">
                   <h3 className="text-2xl font-bold mb-2">500+</h3>
                   <p className="text-gray-600">Happy Clients</p>
@@ -112,7 +112,7 @@ const About = () => {
                   <h3 className="text-2xl font-bold mb-2">50k</h3>
                   <p className="text-gray-600">Photos Taken</p>
                 </div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
