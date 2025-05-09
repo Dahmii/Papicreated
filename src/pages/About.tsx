@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Camera, Users, Star } from "lucide-react";
 
 const About = () => {
   const [ref, inView] = useInView({

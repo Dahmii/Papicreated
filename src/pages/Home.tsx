@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Camera, Heart, Award } from "lucide-react";
+
 import { Link } from "react-router-dom";
 import bgImage from "../assets/img/papiwelcome.jpg";
 
@@ -76,7 +76,7 @@ const Home = () => {
               custom={0}
               className="overflow-hidden"
             >
-              <h1 className="font-korinna text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="font-opensans text-4xl md:text-6xl font-bold mb-6">
                 Freeze Time. Frame Emotions. Feel Forever.
               </h1>
             </motion.div>
@@ -88,8 +88,7 @@ const Home = () => {
               className="overflow-hidden"
             >
               <p className="text-xl mb-8">
-                Capturing authentic moments through the lens — from timeless
-                portraits to candid stories.
+                Turning your memories into timeless art
               </p>
             </motion.div>
             <motion.div
@@ -106,7 +105,7 @@ const Home = () => {
               >
                 <Link
                   to="/contact"
-                  className="inline-block bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="inline-block m-8 bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Book a Session
                 </Link>
@@ -138,21 +137,20 @@ const Home = () => {
             custom={0}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Our Story Through the Lens
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Welcome!</h2>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              With over a decade behind the lens, we turn fleeting moments into
-              visual stories that last a lifetime. Whether it's a glowing sunset
-              engagement shoot or the quiet joy in a newborn's yawn, each frame
-              is a tribute to real, human connection. Rooted in creativity and
-              refined by experience, our work is defined by natural light,
-              emotional depth, and genuine storytelling.
+              We're so glad you're here. We're passoinate about capturing
+              genuine moments and turning them into lasting memories. Whether
+              you're planning a wedding, updating your portraits, or celebrating
+              life's milestones, we're here to make sure every photo reflects
+              the real you. Our goal is to create a comfortable, personalized
+              experience--so you not only your photos but enjoy the process too.
+              Let's create something beautiful together!
             </p>
           </motion.div>
 
           {/* Portfolio Gallery Collage */}
-          <div className="mt-12 columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          <div className="mt-12 columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
             {[
               "/images/collage1.jpeg",
               "/images/collage2.JPG",
@@ -170,7 +168,7 @@ const Home = () => {
               "/images/collage14.JPG",
               "/images/collage15.jpeg",
               "/images/collage16.JPG",
-              "/images/collage8.JPG",
+              "/images/collage17.JPG",
             ].map((src, index) => (
               <motion.div
                 key={index}
@@ -183,7 +181,7 @@ const Home = () => {
                 <img
                   src={src}
                   alt={`Gallery ${index + 1}`}
-                  className="w-full object-cover grayscale hover:grayscale-0 transition-all duration-500 ease-in-out hover:scale-105 rounded-lg"
+                  className="w-full object-cover transition-all duration-500 ease-in-out hover:scale-105 rounded-lg"
                 />
               </motion.div>
             ))}
