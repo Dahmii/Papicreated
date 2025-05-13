@@ -150,25 +150,26 @@ const Home = () => {
           </motion.div>
 
           {/* Portfolio Gallery Collage */}
-          <div className="mt-12 columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               "/images/collage1.jpeg",
-              "/images/collage2.JPG",
-              "/images/collage3.JPG",
-              "/images/collage4.jpeg",
+              "/images/collage2.jpeg",
+              "/images/collage3.jpg",
+              "/images/collage4.jpg",
               "/images/collage5.JPG",
               "/images/collage6.JPG",
-              "/images/collage7.JPG",
-              "/images/collage8.JPG",
-              "/images/collage9.jpeg",
-              "/images/collage10.jpeg",
+              "/images/collage7.jpg",
+              "/images/collage8.jpg",
+              "/images/collage9.jpg",
+              "/images/collage10.jpg",
               "/images/collage11.JPG",
               "/images/collage12.JPG",
-              "/images/collage13.JPG",
-              "/images/collage14.JPG",
+              "/images/collage13.jpeg",
+              "/images/collage14.jpeg",
               "/images/collage15.jpeg",
-              "/images/collage16.JPG",
+              "/images/collage16.jpeg",
               "/images/collage17.JPG",
+              "/images/collage18.JPG",
             ].map((src, index) => (
               <motion.div
                 key={index}
@@ -176,7 +177,7 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="overflow-hidden rounded-lg break-inside-avoid"
+                className="overflow-hidden rounded-lg"
               >
                 <img
                   src={src}
