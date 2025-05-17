@@ -23,21 +23,21 @@ const Blog = () => {
 
       <div className="flex gap-6 mt-6">
         <a
-          href="https://www.instagram.com/yourhandle"
+          href="https://www.instagram.com/papi.created_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-700 hover:text-black transition"
         >
           <Instagram size={28} />
         </a>
-        <a
+        {/* <a
           href="https://www.twitter.com/yourhandle"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-700 hover:text-black transition"
         >
           <Twitter size={28} />
-        </a>
+        </a> */}
       </div>
 
       <Link

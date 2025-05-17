@@ -1,5 +1,5 @@
-import React from 'react';
-import { Instagram, Twitter, Facebook, Mail } from 'lucide-react';
+import React from "react";
+import { Instagram, Twitter, Facebook, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,24 +9,34 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Papicreated</h3>
             <p className="text-gray-400">
-              Capturing moments, creating memories, and telling stories through the lens.
+              Capturing moments, creating memories, and telling stories through
+              the lens.
             </p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="/portfolio" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="/portfolio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Portfolio
                 </a>
               </li>
               <li>
-                <a href="/about" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="/about"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   About
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+                <a
+                  href="/contact"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Contact
                 </a>
               </li>
@@ -35,10 +45,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a
+                href="https://www.instagram.com/papi.created_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                className="text-gray-400 hover:text-white transition-colors"
+              >
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-6 w-6" />
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -46,12 +59,14 @@ const Footer = () => {
               </a>
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Mail className="h-6 w-6" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Papicreated. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Papicreated. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
