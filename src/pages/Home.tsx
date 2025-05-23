@@ -119,7 +119,7 @@ const Home = () => {
                   to="/portfolio"
                   className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white/10 transition-colors"
                 >
-                  View Portfolio
+                  View Gallery
                 </Link>
               </motion.span>
             </motion.div>

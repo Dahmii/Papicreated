@@ -49,7 +49,7 @@ const Portfolio = () => {
             transition={{ duration: 0.8 }}
             className="text-center text-white"
           >
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Portfolio</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Gallery</h1>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Discover some of our favorite moments — beautifully curated into
               collections that tell stories with light, color, and emotion.
