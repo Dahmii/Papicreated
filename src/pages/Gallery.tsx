@@ -10,7 +10,7 @@ const Gallery = () => {
           {categories.map((category) => (
             <li
               key={category}
-              className="text-2xl sm:text-5xl text-gray-500 hover:text-black transition duration-300"
+              className="text-5xl sm:text-5xl text-gray-500 hover:text-black transition duration-300"
             >
               <Link to={`/${category.toLowerCase()}`}>{category}</Link>
             </li>
