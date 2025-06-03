@@ -125,7 +125,13 @@ const Contact = () => {
               className="bg-white p-8 rounded-lg shadow-lg"
             >
               <h2 className="text-3xl font-bold mb-8">Send a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formsubmit.co/03661a1e24e23dbba932545eaf2ed2d9"
+                method="POST"
+                className="space-y-6"
+              >
+                <input type="hidden" name="_captcha" value="false" />
+
                 <div>
                   <label
                     htmlFor="name"
@@ -137,8 +143,8 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
+                    // value={formData.name}
+                    // onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
                     required
                   />
