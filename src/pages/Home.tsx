@@ -59,7 +59,7 @@ const Home = () => {
           className="absolute inset-0"
         >
           <div
-            className="absolute inset-0 bg-cover bg-no-repeat scale-105 transition-transform duration-1000 hover:scale-100"
+            className="absolute inset-0 bg-cover bg-right-top bg-no-repeat scale-105 transition-transform duration-1000 hover:scale-100"
             style={{
               backgroundImage: `url(${bgImage})`,
             }}
@@ -67,8 +67,8 @@ const Home = () => {
             <div className="absolute inset-0 bg-black/50" />
           </div>
         </motion.div>
-        <div className="relative h-full flex items-center justify-center text-center text-white px-4">
-          <div className="max-w-3xl">
+        <div className="relative h-full flex items-center justify-start text-left text-white px-4 sm:px-8 md:px-16 lg:px-40">
+          <div className="max-w-3xl w-full">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -76,7 +76,7 @@ const Home = () => {
               custom={0}
               className="overflow-hidden"
             >
-              <h1 className="font-opensans text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                 Freeze Time. Frame Emotions. Feel Forever.
               </h1>
             </motion.div>
@@ -87,7 +87,7 @@ const Home = () => {
               custom={1}
               className="overflow-hidden"
             >
-              <p className="text-xl mb-8">
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed">
                 Turning your memories into timeless art
               </p>
             </motion.div>
@@ -96,7 +96,7 @@ const Home = () => {
               animate="visible"
               variants={textVariants}
               custom={2}
-              className="space-x-4"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
             >
               <motion.span
                 whileHover={{ scale: 1.05 }}
@@ -105,7 +105,7 @@ const Home = () => {
               >
                 <Link
                   to="/contact"
-                  className="inline-block m-8 bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors"
+                  className="inline-block w-full sm:w-auto bg-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Book a Session
                 </Link>
@@ -117,7 +117,7 @@ const Home = () => {
               >
                 <Link
                   to="/gallery"
-                  className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white/10 transition-colors"
+                  className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-white/10 transition-colors text-center"
                 >
                   View Gallery
                 </Link>
