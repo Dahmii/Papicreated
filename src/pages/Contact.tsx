@@ -7,6 +7,10 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
+    inquiryType: "",
+    eventDate: "",
+    location: "",
     subject: "",
     message: "",
   });
@@ -131,6 +135,11 @@ const Contact = () => {
                 className="space-y-6"
               >
                 <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://papicreated.com/ThankYou"
+                />
 
                 <div>
                   <label

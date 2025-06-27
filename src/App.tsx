@@ -16,6 +16,7 @@ import Gallery from "./pages/Gallery";
 import Lifestyle from "./pages/Lifestyle";
 import Portrait from "./pages/Portrait";
 import Studio from "./pages/Studio";
+import ThankYou from "./pages/ThankYou";
 
 // Wrapper component to access location
 function Layout() {
@@ -37,6 +38,7 @@ function Layout() {
           <Route path="/lifestyle" element={<Lifestyle />} />
           <Route path="/portrait" element={<Portrait />} />
           <Route path="/studio" element={<Studio />} />
+          <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
       </main>
       {/* {!hideLayout && <Footer />} */}

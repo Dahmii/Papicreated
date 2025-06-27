@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import { Link } from "react-router-dom";
-import bgImage from "../assets/img/papiwelcome.jpg";
+import bgImage from "../assets/img/papibg3.jpg";
 
 const Home = () => {
   const [ref, inView] = useInView({
@@ -59,9 +59,11 @@ const Home = () => {
           className="absolute inset-0"
         >
           <div
-            className="absolute inset-0 bg-cover bg-right-top bg-no-repeat scale-105 transition-transform duration-1000 hover:scale-100"
+            className="absolute inset-0 bg-no-repeat transition-transform duration-1000 hover:scale-100"
             style={{
               backgroundImage: `url(${bgImage})`,
+              backgroundSize: "100%",
+              backgroundPosition: "right center",
             }}
           >
             <div className="absolute inset-0 bg-black/50" />
@@ -77,7 +79,13 @@ const Home = () => {
               className="overflow-hidden"
             >
               <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                Freeze Time. Frame Emotions. Feel Forever.
+                Freeze Time.
+              </h1>
+              <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+                Frame Emotions.
+              </h1>
+              <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+                Feel Forever.
               </h1>
             </motion.div>
             <motion.div
@@ -105,7 +113,7 @@ const Home = () => {
               >
                 <Link
                   to="/contact"
-                  className="inline-block w-full sm:w-auto bg-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+                  className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold transition-colors text-center"
                 >
                   Book a Session
                 </Link>
@@ -117,7 +125,7 @@ const Home = () => {
               >
                 <Link
                   to="/gallery"
-                  className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold hover:bg-white/10 transition-colors text-center"
+                  className="inline-block w-full sm:w-auto bg-white border-2 border-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold  transition-colors text-center"
                 >
                   View Gallery
                 </Link>
