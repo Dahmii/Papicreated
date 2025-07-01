@@ -4,6 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { Link } from "react-router-dom";
 import bgImage from "../assets/img/papibg3.jpg";
 import mobileImage from "../assets/img/papiwelcome.jpg";
+import "../fonts/fonts.css";
 
 const Home = () => {
   const [ref, inView] = useInView({
@@ -67,7 +68,7 @@ const Home = () => {
               backgroundPosition: "right center",
             }}
           >
-            <div className="absolute inset-0 bg-black/50" />
+            {/* <div className="absolute inset-0 bg-black/50" /> */}
           </div>
 
           {/* Mobile background */}
@@ -79,11 +80,11 @@ const Home = () => {
               backgroundPosition: "center",
             }}
           >
-            <div className="absolute inset-0 bg-black/50" />
+            {/* <div className="absolute inset-0 bg-black/50" /> */}
           </div>
         </motion.div>
         <div className="relative h-full flex items-center justify-start text-left text-white px-4 sm:px-8 md:px-16 lg:px-40">
-          <div className="max-w-3xl w-full">
+          <div>
             <motion.div
               initial="hidden"
               animate="visible"
@@ -91,15 +92,18 @@ const Home = () => {
               custom={0}
               className="overflow-hidden"
             >
-              <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                Freeze Time.
+              <h1
+                className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-grotesque-fit-bold-italic"
+                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
+              >
+                Freeze Time. <br /> Frame Emotions. <br /> Feel Forever.
               </h1>
-              <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
+              {/* <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                 Frame Emotions.
               </h1>
               <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                 Feel Forever.
-              </h1>
+              </h1> */}
             </motion.div>
             <motion.div
               initial="hidden"
@@ -108,7 +112,10 @@ const Home = () => {
               custom={1}
               className="overflow-hidden"
             >
-              <p className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed">
+              <p
+                className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed"
+                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
+              >
                 Turning your memories into timeless art
               </p>
             </motion.div>
@@ -127,6 +134,7 @@ const Home = () => {
                 <Link
                   to="/contact"
                   className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold transition-colors text-center"
+                  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
                 >
                   Book a Session
                 </Link>
@@ -139,6 +147,7 @@ const Home = () => {
                 <Link
                   to="/gallery"
                   className="inline-block w-full sm:w-auto bg-white border-2 border-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold  transition-colors text-center"
+                  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
                 >
                   View Gallery
                 </Link>
