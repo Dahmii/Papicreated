@@ -107,7 +107,7 @@
   font-style: normal;
   font-weight: normal;
   src: local("Body-Grotesque-Bold-trial"),
-    url("Body-Grotesque-Bold-trial.ttf") format("ttf");
+    url("../src/fonts/Body-Grotesque-Bold-trial.ttf") format("truetype");
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
