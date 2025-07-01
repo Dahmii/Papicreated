@@ -70,6 +70,46 @@
 }
   */
 
+@font-face {
+  font-family: "Body Grotesque Fit Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Body Grotesque Fit Bold Italic"),
+    url("Zetafonts - Body Grotesque Fit Bold Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Body Grotesque Large Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Body Grotesque Large Italic"),
+    url("Zetafonts - Body Grotesque Large Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Body Text Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Body Text Italic"),
+    url("Zetafonts - Body Text Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Body Text Slim Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Body Text Slim Light"),
+    url("Zetafonts - Body Text Slim Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Body Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Body-Grotesque-Bold-trial"),
+    url("Body-Grotesque-Bold-trial.ttf") format("ttf");
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 @tailwind base;

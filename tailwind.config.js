@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         opensans: ["Open Sans", "sans-serif"],
+        "body-bold": ["'Body Bold'", "sans-serif"], // ✅ Newly added
         "body-grotesque-fit-bold-italic": [
           "'Body Grotesque Fit Bold Italic'",
           "sans-serif",

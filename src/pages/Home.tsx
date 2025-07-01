@@ -93,7 +93,7 @@ const Home = () => {
               className="overflow-hidden"
             >
               <h1
-                className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-grotesque-fit-bold-italic"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-bold"
                 style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
               >
                 Freeze Time. <br /> Frame Emotions. <br /> Feel Forever.
