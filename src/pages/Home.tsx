@@ -113,7 +113,7 @@ const Home = () => {
               className="overflow-hidden"
             >
               <p
-                className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed"
+                className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold"
                 style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
               >
                 Turning your memories into timeless art
@@ -133,7 +133,7 @@ const Home = () => {
               >
                 <Link
                   to="/contact"
-                  className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold transition-colors text-center"
+                  className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-body-bold transition-colors text-center"
                   style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
                 >
                   Book a Session
@@ -146,8 +146,7 @@ const Home = () => {
               >
                 <Link
                   to="/gallery"
-                  className="inline-block w-full sm:w-auto bg-white border-2 border-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold  transition-colors text-center"
-                  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
+                  className="inline-block w-full sm:w-auto bg-white border-2 border-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold  transition-colors text-center font-body-bold"
                 >
                   View Gallery
                 </Link>
