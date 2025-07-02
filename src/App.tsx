@@ -16,6 +16,9 @@ import Gallery from "./pages/Gallery";
 import Lifestyle from "./pages/Lifestyle";
 import Portrait from "./pages/Portrait";
 import Studio from "./pages/Studio";
+import Engagement from "./pages/Engagement";
+import Events from "./pages/Events";
+import Family from "./pages/Family";
 import ThankYou from "./pages/ThankYou";
 
 // Wrapper component to access location
@@ -38,6 +41,9 @@ function Layout() {
           <Route path="/lifestyle" element={<Lifestyle />} />
           <Route path="/portrait" element={<Portrait />} />
           <Route path="/studio" element={<Studio />} />
+          <Route path="/engagement" element={<Engagement />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/family" element={<Family />} />
           <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
       </main>

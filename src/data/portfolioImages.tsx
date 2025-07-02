@@ -350,15 +350,103 @@ const allImages: PortfolioImage[] = [
     location: "",
     description: "",
   },
+  {
+    url: "/PapiImages/Engagement/engagement1.JPG",
+    category: "Engagement",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Engagement/engagement2.JPG",
+    category: "Engagement",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Engagement/engagement3.JPG",
+    category: "Engagement",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Engagement/engagement4.JPG",
+    category: "Engagement",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Events/events4.JPG",
+    category: "Events",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Events/events1.JPG",
+    category: "Events",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Events/events5.jpg",
+    category: "Events",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Events/events2.jpg",
+    category: "Events",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Events/events3.jpg",
+    category: "Events",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Family/family1.jpeg",
+    category: "Family",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Family/family2.jpeg",
+    category: "Family",
+    title: "",
+    location: "",
+    description: "",
+  },
 ];
 
-const categoriesOrder = ["Portrait", "Lifestyle", "Weddings", "Studio"];
+const categoriesOrder = [
+  "Portrait",
+  "Lifestyle",
+  "Weddings",
+  "Studio",
+  "Engagement",
+  "Events",
+  "Family",
+];
 
 const grouped: Record<string, PortfolioImage[]> = {
   Portrait: [],
   Lifestyle: [],
   Weddings: [],
   Studio: [],
+  Engagement: [],
+  Events: [],
+  Family: [],
 };
 
 // Group images by category
@@ -373,7 +461,10 @@ while (
   grouped.Portrait.length ||
   grouped.Lifestyle.length ||
   grouped.Weddings.length ||
-  grouped.Studio.length
+  grouped.Studio.length ||
+  grouped.Engagement.length ||
+  grouped.Events.length ||
+  grouped.Family.length
 ) {
   for (const category of categoriesOrder) {
     if (grouped[category].length > 0) {

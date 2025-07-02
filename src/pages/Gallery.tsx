@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
-const categories = ["Weddings", "Lifestyle", "Portrait", "Studio"];
+const categories = [
+  "Weddings",
+  "Portrait",
+  "Lifestyle",
+  "Engagement",
+  "Events",
+  "Family",
+];
 
 const Gallery = () => {
   return (

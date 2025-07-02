@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 import { Link } from "react-router-dom";
 import bgImage from "../assets/img/papibg3.jpg";
-import mobileImage from "../assets/img/papiwelcome.jpg";
+import mobileImage from "../assets/img/mobilebg.jpg";
 import "../fonts/fonts.css";
 
 const Home = () => {
@@ -12,17 +12,26 @@ const Home = () => {
     threshold: 0.1,
   });
 
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 0.4,
+      },
+    },
+  };
+
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: (i: number) => ({
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
-        delay: i * 0.1,
         duration: 0.8,
         ease: [0.6, -0.05, 0.01, 0.99],
       },
-    }),
+    },
   };
 
   const imageVariants = {
@@ -67,9 +76,7 @@ const Home = () => {
               backgroundSize: "100%",
               backgroundPosition: "right center",
             }}
-          >
-            {/* <div className="absolute inset-0 bg-black/50" /> */}
-          </div>
+          ></div>
 
           {/* Mobile background */}
           <div
@@ -79,70 +86,54 @@ const Home = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-          >
-            {/* <div className="absolute inset-0 bg-black/50" /> */}
-          </div>
+          ></div>
         </motion.div>
+
+        {/* Text Content */}
         <div className="relative h-full flex items-center justify-start text-left text-white px-4 sm:px-8 md:px-16 lg:px-40">
-          <div>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={textVariants}
-              custom={0}
-              className="overflow-hidden"
-            >
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+          >
+            <motion.div variants={textVariants} className="overflow-hidden">
               <h1
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-bold"
-                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
+                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
               >
                 Freeze Time. <br /> Frame Emotions. <br /> Feel Forever.
               </h1>
-              {/* <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                Frame Emotions.
-              </h1>
-              <h1 className="font-opensans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                Feel Forever.
-              </h1> */}
             </motion.div>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              variants={textVariants}
-              custom={1}
-              className="overflow-hidden"
-            >
+
+            <motion.div variants={textVariants} className="overflow-hidden">
               <p
                 className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold"
-                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
+                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
               >
                 Turning your memories into timeless art
               </p>
             </motion.div>
+
             <motion.div
-              initial="hidden"
-              animate="visible"
               variants={textVariants}
-              custom={2}
               className="flex flex-col sm:flex-row gap-4 sm:gap-6"
             >
               <motion.span
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block"
               >
                 <Link
                   to="/contact"
                   className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-body-bold transition-colors text-center"
-                  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.6)" }}
+                  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
                 >
                   Book a Session
                 </Link>
               </motion.span>
+
               <motion.span
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block"
               >
                 <Link
                   to="/gallery"
@@ -152,7 +143,7 @@ const Home = () => {
                 </Link>
               </motion.span>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -168,17 +159,17 @@ const Home = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Welcome!</h2>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're so glad you're here. We're passoinate about capturing
+              We're so glad you're here. We're passionate about capturing
               genuine moments and turning them into lasting memories. Whether
               you're planning a wedding, updating your portraits, or celebrating
               life's milestones, we're here to make sure every photo reflects
               the real you. Our goal is to create a comfortable, personalized
-              experience--so you not only your photos but enjoy the process too.
-              Let's create something beautiful together!
+              experience—so you not only love your photos but enjoy the process
+              too. Let's create something beautiful together!
             </p>
           </motion.div>
 
-          {/* Portfolio Gallery Collage */}
+          {/* Portfolio Gallery */}
           <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
               "/images/tinified/1.jpg",
