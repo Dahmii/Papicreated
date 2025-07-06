@@ -97,40 +97,28 @@ const Home = () => {
             variants={containerVariants}
           >
             <motion.div variants={textVariants} className="overflow-hidden">
-              <h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-bold"
-                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
-              >
+              {/* Mobile Text */}
+              <h1 className="block sm:hidden text-[2rem] leading-snug font-bold mb-4 font-body-bold whitespace-pre-line">
+                Freeze{"\n"}Time.{"\n"}Frame{"\n"}Emotions:{"\n"}Feel{"\n"}
+                Forever.
+              </h1>
+
+              {/* Desktop Text (unchanged) */}
+              <h1 className="hidden sm:block text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-bold">
                 Freeze Time. <br /> Frame Emotions. <br /> Feel Forever.
               </h1>
             </motion.div>
 
             <motion.div variants={textVariants} className="overflow-hidden">
-              <p
-                className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold"
-                style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
-              >
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold text-center sm:text-left">
                 Turning your memories into timeless art
               </p>
             </motion.div>
 
             <motion.div
               variants={textVariants}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
+              className="flex flex-col gap-4 sm:flex-row sm:gap-6 w-full sm:w-auto"
             >
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
-                  to="/contact"
-                  className="inline-block w-full sm:w-auto bg-transparent border-2 border-white text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-body-bold transition-colors text-center"
-                  style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.4)" }}
-                >
-                  Book a Session
-                </Link>
-              </motion.span>
-
               <motion.span
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -140,6 +128,18 @@ const Home = () => {
                   className="inline-block w-full sm:w-auto bg-white border-2 border-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold  transition-colors text-center font-body-bold"
                 >
                   View Gallery
+                </Link>
+              </motion.span>
+
+              <motion.span
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  to="/contact"
+                  className="inline-block w-full sm:w-auto bg-black border-2 border-black text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-body-bold transition-colors text-center"
+                >
+                  Book a Session
                 </Link>
               </motion.span>
             </motion.div>
