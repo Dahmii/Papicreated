@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 import { Link } from "react-router-dom";
 import bgImage from "../assets/img/papibg3.jpg";
-import mobileImage from "../assets/img/mobilebg.jpg";
+import mobileImage from "../assets/img/mobilebg4.jpg";
 import "../fonts/fonts.css";
 
 const Home = () => {
@@ -98,8 +98,8 @@ const Home = () => {
           >
             <motion.div variants={textVariants} className="overflow-hidden">
               {/* Mobile Text */}
-              <h1 className="block sm:hidden text-[2rem] leading-snug font-bold mb-4 font-body-bold whitespace-pre-line">
-                Freeze{"\n"}Time.{"\n"}Frame{"\n"}Emotions:{"\n"}Feel{"\n"}
+              <h1 className="block sm:hidden text-[2.8rem] leading-[1.1] font-bold mb-4 font-body-bold whitespace-pre-line">
+                Freeze{"\n"}Time.{"\n"}Frame{"\n"}Emotions.{"\n"}Feel{"\n"}
                 Forever.
               </h1>
 
@@ -110,7 +110,7 @@ const Home = () => {
             </motion.div>
 
             <motion.div variants={textVariants} className="overflow-hidden">
-              <p className="text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold text-center sm:text-left">
+              <p className="text-[1.6rem] sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold text-left sm:text-left">
                 Turning your memories into timeless art
               </p>
             </motion.div>
