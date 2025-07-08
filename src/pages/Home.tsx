@@ -159,13 +159,17 @@ const Home = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Welcome!</h2>
             <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're so glad you're here. We're passionate about capturing
-              genuine moments and turning them into lasting memories. Whether
-              you're planning a wedding, updating your portraits, or celebrating
-              life's milestones, we're here to make sure every photo reflects
-              the real you. Our goal is to create a comfortable, personalized
-              experience—so you not only love your photos but enjoy the process
-              too. Let's create something beautiful together!
+              With over six years of experience behind the lens and three years
+              working professionally, I’ve had the privilege of capturing
+              everything from intimate moments to grand celebrations.
+              Photography, for me, is more than just taking pictures — it’s
+              about telling your story with honesty, creativity, and intention.
+              Whether it’s a portrait session, lifestyle shoot, or your wedding
+              day, I bring a calm, thoughtful energy to every shoot, making sure
+              you feel comfortable, seen, and celebrated. When you book me,
+              you’re not just getting a photographer — you’re getting someone
+              who’s fully invested in your vision and who knows how to bring it
+              to life with style and heart.
             </p>
           </motion.div>
 

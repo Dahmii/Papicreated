@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Akanji from "../assets/img/Àkànjí.jpg";
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -72,9 +73,9 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <img
-                src="#"
+                src={Akanji}
                 alt="Photographer at work"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl w-3/4 mx-auto"
               />
             </motion.div>
             <motion.div
@@ -83,20 +84,23 @@ const About = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl font-bold mb-6">
-                The Story Behind the Lens
+                Hi there, I’m Oluwasomidotun (a.k.a) Àkànjí.
               </h2>
               <p className="text-gray-600 mb-6">
-                With over a decade of experience in photography, I've dedicated
-                my life to capturing the essence of moments that matter most. My
-                journey began with a simple passion for storytelling through
-                images, and has evolved into a lifelong pursuit of artistic
-                excellence.
+                I’m a portrait photographer with over six years of experience
+                behind the lens and three years working professionally, I’ve had
+                the privilege of capturing everything from intimate moments to
+                grand celebrations. Photography, for me, is more than just
+                taking pictures — it’s about telling your story with honesty,
+                creativity, and intention. Whether it’s a portrait session,
+                lifestyle shoot, or your wedding day, I bring a calm, thoughtful
+                energy to every shoot, making sure you feel comfortable, seen,
+                and celebrated.
               </p>
               <p className="text-gray-600 mb-6">
-                Every shoot is an opportunity to create something unique and
-                meaningful. I believe in building genuine connections with my
-                clients, understanding their vision, and translating it into
-                timeless photographs.
+                When you book me, you’re not just getting a photographer —
+                you’re getting someone who’s fully invested in your vision and
+                who knows how to bring it to life with style and heart.
               </p>
               {/* <div className="grid grid-cols-3 gap-4 text-center">
                 <div className="p-4 bg-gray-50 rounded-lg">
