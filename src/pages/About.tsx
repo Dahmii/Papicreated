@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Akanji from "../assets/img/Àkànjí.jpg";
+import Akanji from "../assets/img/Akanji.jpg";
 
 const About = () => {
   const [ref, inView] = useInView({
