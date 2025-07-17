@@ -19,6 +19,7 @@ import Studio from "./pages/Studio";
 import Engagement from "./pages/Engagement";
 import Events from "./pages/Events";
 import Family from "./pages/Family";
+import Cars from "./pages/Cars";
 import ThankYou from "./pages/ThankYou";
 
 // Wrapper component to access location
@@ -44,6 +45,7 @@ function Layout() {
           <Route path="/engagement" element={<Engagement />} />
           <Route path="/events" element={<Events />} />
           <Route path="/family" element={<Family />} />
+          <Route path="/cars" element={<Cars />} />
           <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
       </main>

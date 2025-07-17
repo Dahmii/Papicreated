@@ -441,6 +441,55 @@ const allImages: PortfolioImage[] = [
     location: "",
     description: "",
   },
+  {
+    url: "/PapiImages/Cars/cars1.JPG",
+    category: "Cars",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Cars/cars2.JPG",
+    category: "Cars",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Cars/cars3.JPG",
+    category: "Cars",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Cars/cars4.JPG",
+    category: "Cars",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Cars/cars5.JPG",
+    category: "Cars",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Cars/cars6.JPG",
+    category: "Cars",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Cars/cars7.JPG",
+    category: "Cars",
+    title: "",
+    location: "",
+    description: "",
+  },
 ];
 
 const categoriesOrder = [
@@ -451,6 +500,7 @@ const categoriesOrder = [
   "Engagement",
   "Events",
   "Family",
+  "Cars",
 ];
 
 const grouped: Record<string, PortfolioImage[]> = {
@@ -461,6 +511,7 @@ const grouped: Record<string, PortfolioImage[]> = {
   Engagement: [],
   Events: [],
   Family: [],
+  Cars: [],
 };
 
 // Group images by category
@@ -478,7 +529,8 @@ while (
   grouped.Studio.length ||
   grouped.Engagement.length ||
   grouped.Events.length ||
-  grouped.Family.length
+  grouped.Family.length ||
+  grouped.Cars.length
 ) {
   for (const category of categoriesOrder) {
     if (grouped[category].length > 0) {
