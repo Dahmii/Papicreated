@@ -225,6 +225,20 @@ const allImages: PortfolioImage[] = [
     description: "",
   },
   {
+    url: "/PapiImages/Lifestyle/lifestyle15.JPG",
+    category: "Lifestyle",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
+    url: "/PapiImages/Lifestyle/lifestyle16.JPG",
+    category: "Lifestyle",
+    title: "",
+    location: "",
+    description: "",
+  },
+  {
     url: "/PapiImages/Studio/studio1.JPG",
     category: "Studio",
     title: "",
