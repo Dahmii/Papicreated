@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import { Link } from "react-router-dom";
-import bgImage from "../assets/img/papibg3.jpg";
-import mobileImage from "../assets/img/mobilebg4.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+import bgImage from "../assets/img/papibg3.webp";
+import mobileImage from "../assets/img/mobilebg4.webp";
 import "../fonts/fonts.css";
 
 const Home = () => {
@@ -63,86 +65,62 @@ const Home = () => {
     <div className="w-full">
       {/* Hero Section */}
       <section className="relative h-screen overflow-hidden">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={imageVariants}
-          className="absolute inset-0"
-        >
-          <div
-            className="absolute inset-0 bg-cover bg-no-repeat transition-transform duration-1000 hover:scale-100"
-            style={{
-              backgroundImage: `url(${bgImage})`,
-              backgroundSize: "100%",
-              backgroundPosition: "right center",
-            }}
-          ></div>
+        {/* Background image - no animation delay */}
+        <picture>
+          {/* Mobile first */}
+          <source
+            srcSet={mobileImage}
+            media="(max-width: 640px)"
+            type="image/webp"
+          />
+          <source srcSet={bgImage} type="image/webp" />
+          <img
+            src={bgImage}
+            alt="Photography background"
+            className="absolute inset-0 w-full h-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            width="1920"
+            height="1080"
+          />
+        </picture>
 
-          {/* Mobile background */}
-          <div
-            className="absolute inset-0 block sm:hidden bg-no-repeat"
-            style={{
-              backgroundImage: `url(${mobileImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          ></div>
-        </motion.div>
-
-        {/* Text Content */}
+        {/* Content */}
         <div className="relative h-full flex items-center justify-start text-left text-white px-4 sm:px-8 md:px-16 lg:px-40">
           <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <motion.div variants={textVariants} className="overflow-hidden">
-              {/* Mobile Text */}
-              <h1 className="block sm:hidden text-[2.8rem] leading-[1.1] font-bold mb-4 font-body-bold whitespace-pre-line">
-                Freeze{"\n"}Time.{"\n"}Frame{"\n"}Emotions.{"\n"}Feel{"\n"}
-                Forever.
-              </h1>
+            {/* Mobile Text */}
+            <h1 className="block sm:hidden text-[2.8rem] leading-[1.1] font-bold mb-4 font-body-bold whitespace-pre-line">
+              Freeze{"\n"}Time.{"\n"}Frame{"\n"}Emotions.{"\n"}Feel{"\n"}
+              Forever.
+            </h1>
 
-              {/* Desktop Text (unchanged) */}
-              <h1 className="hidden sm:block text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-bold">
-                Freeze Time. <br /> Frame Emotions. <br /> Feel Forever.
-              </h1>
-            </motion.div>
+            {/* Desktop Text */}
+            <h1 className="hidden sm:block text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight font-body-bold">
+              Freeze Time. <br /> Frame Emotions. <br /> Feel Forever.
+            </h1>
 
-            <motion.div variants={textVariants} className="overflow-hidden">
-              <p className="text-[1.6rem] sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold text-left sm:text-left">
-                Turning your memories into timeless art
-              </p>
-            </motion.div>
+            <p className="text-[1.6rem] sm:text-xl mb-6 sm:mb-8 leading-relaxed font-body-bold text-left">
+              Turning your memories into timeless art
+            </p>
 
-            <motion.div
-              variants={textVariants}
-              className="flex flex-col gap-4 sm:flex-row sm:gap-6 w-full sm:w-auto"
-            >
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+            <div className="flex flex-col gap-4 sm:flex-row sm:gap-6 w-full sm:w-auto">
+              <Link
+                to="/gallery"
+                className="inline-block w-full sm:w-auto bg-white border-2 border-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold text-center font-body-bold"
               >
-                <Link
-                  to="/gallery"
-                  className="inline-block w-full sm:w-auto bg-white border-2 border-white text-black px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-semibold  transition-colors text-center font-body-bold"
-                >
-                  View Gallery
-                </Link>
-              </motion.span>
-
-              <motion.span
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                View Gallery
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-block w-full sm:w-auto bg-black border-2 border-black text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-body-bold text-center"
               >
-                <Link
-                  to="/contact"
-                  className="inline-block w-full sm:w-auto bg-black border-2 border-black text-white px-6 sm:px-8 py-3 rounded-full text-base sm:text-lg font-body-bold transition-colors text-center"
-                >
-                  Book a Session
-                </Link>
-              </motion.span>
-            </motion.div>
+                Book a Session
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -206,13 +184,19 @@ const Home = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="overflow-hidden rounded-lg"
               >
-                <img
+                <LazyLoadImage
                   src={src}
                   alt={`Gallery ${index + 1}`}
+                  effect="blur"
+                  width="100%"
+                  height="auto"
                   className="w-full object-cover transition-all duration-500 ease-in-out hover:scale-105 rounded-lg"
+                  // Serve smaller sizes based on screen width
+                  srcSet={`${src}?w=400 400w, ${src}?w=800 800w`}
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </motion.div>
             ))}
