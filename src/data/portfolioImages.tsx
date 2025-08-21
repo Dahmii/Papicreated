@@ -436,13 +436,6 @@ const allImages: PortfolioImage[] = [
     description: "",
   },
   {
-    url: "/PapiImages/Events/events5.jpg",
-    category: "Events",
-    title: "",
-    location: "",
-    description: "",
-  },
-  {
     url: "/PapiImages/Events/events2.jpg",
     category: "Events",
     title: "",
@@ -458,13 +451,6 @@ const allImages: PortfolioImage[] = [
   },
   {
     url: "/PapiImages/Events/events4.jpg",
-    category: "Events",
-    title: "",
-    location: "",
-    description: "",
-  },
-  {
-    url: "/PapiImages/Events/events5.jpg",
     category: "Events",
     title: "",
     location: "",
