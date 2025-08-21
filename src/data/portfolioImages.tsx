@@ -112,14 +112,6 @@ const allImages: PortfolioImage[] = [
     location: "",
     description: "",
   },
-
-  {
-    url: "/PapiImages/Lifestyle/lifestyle1.JPG",
-    category: "Lifestyle",
-    title: "",
-    location: "",
-    description: "",
-  },
   {
     url: "/PapiImages/Lifestyle/lifestyle2.JPG",
     category: "Lifestyle",
@@ -157,13 +149,6 @@ const allImages: PortfolioImage[] = [
   },
   {
     url: "/PapiImages/Lifestyle/lifestyle7.JPG",
-    category: "Lifestyle",
-    title: "",
-    location: "",
-    description: "",
-  },
-  {
-    url: "/PapiImages/Lifestyle/lifestyle8.JPG",
     category: "Lifestyle",
     title: "",
     location: "",
